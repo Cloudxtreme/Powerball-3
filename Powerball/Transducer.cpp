@@ -36,7 +36,7 @@ string Transducer::transduce(string command)
 	}
 	else if ((token[0] == "SR") || (token[0] == "sr"))
 	{
-		result = "need functionality 4";
+		result = powerball.seedRandomNumbers(token[1]);
 	}
 	else if ((token[0] == "DETAILED HELP") || (token[0] == "DH") || (token[0]=="dh"))
 	{

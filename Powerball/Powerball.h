@@ -13,6 +13,7 @@ public:
 	string enterNumbers(string);
 	string frequentNumbers();
 	string generateRandomNumbers();
+	string seedRandomNumbers(string);
 private:
 	int numberOfEntries;
 	string formatNumbers(int, int, int, int, int, int);

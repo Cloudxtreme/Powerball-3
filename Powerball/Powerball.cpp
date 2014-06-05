@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <iostream>
 #include <time.h>
+#include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 
@@ -115,6 +117,26 @@ string Powerball::generateRandomNumbers()
 
 	result = formatNumbers(w1, w2, w3, w4, w5, pb);
 
+
+	return result;
+}
+
+string Powerball::seedRandomNumbers(string seed)
+{
+	string result;
+	unsigned int tempSeed;
+	int w1, w2, w3, w4, w5, pb;
+	tempSeed = stringToInt(seed);
+	srand(time(NULL)+tempSeed);
+
+	w1 = (rand() % 59 + 1);
+	w2 = (rand() % 59) + 1;
+	w3 = (rand() % 59) + 1;
+	w4 = (rand() % 59) + 1;
+	w5 = (rand() % 59) + 1;
+	pb = (rand() % 59) + 1;
+
+	result = formatNumbers(w1, w2, w3, w4, w5, pb);
 
 	return result;
 }
