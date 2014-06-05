@@ -1,0 +1,1 @@
+/*Delete this line and paste in winning numbers from http://www.powerball.com/powerball/winnums-text.txt*/
