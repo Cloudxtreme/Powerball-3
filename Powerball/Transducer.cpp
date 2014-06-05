@@ -14,10 +14,10 @@ string Transducer::transduce(string command)
 	{
 		result="Commands:\n";
 		result+="-------------------\n";
-		result += "\tENTER NUMBERS (EN)\n";
+		result += "/tBATCH winNums.txt\n";
 		result += "\tCALCULATE FREQUENT NUMBERS (FN)\n";
 		result += "\tGENERATE RANDOM NUMBERS (GN)\n";
-		result += "\tGENERATE RANDOM NUMBERS WITH SEED (SR)\n";
+		result += "\tGENERATE RANDOM NUMBERS WITH SEED (SR) + integer\n";
 		result+="\tHELP(H)\n";
 		result += "\tDETAILED HELP (DH)\n";
 		result+="\tQUIT(Q)\n";
@@ -40,7 +40,15 @@ string Transducer::transduce(string command)
 	}
 	else if ((token[0] == "DETAILED HELP") || (token[0] == "DH") || (token[0]=="dh"))
 	{
-		result = "need functionality";
+		result = result = "Commands:\n";
+		result += "-------------------\n";
+		result += "\tBATCH winNums.txt: Enters all Powerball records contained in winNums.txt\n";
+		result += "\tCALCULATE FREQUENT NUMBERS (FN): Calculates which numbers are most frequently drawn in Powerball\n";
+		result += "\tGENERATE RANDOM NUMBERS (GN): Generates a random Powerball play\n";
+		result += "\tGENERATE RANDOM NUMBERS WITH SEED (SR) + integer: Generates a random Powerball play with integer seed\n";
+		result += "\tHELP(H): Shows all available commands\n";
+		result += "\tDETAILED HELP (DH): Shows all available commands with description\n";
+		result += "\tQUIT(Q)\n";;
 	}
 	else if((token[0]=="QUIT")||(token[0]=="Q")||(token[0]=="q"))
 	{
