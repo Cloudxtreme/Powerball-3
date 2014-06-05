@@ -10,3 +10,6 @@ The text file can be found at http://www.powerball.com/powerball/winnums-text.tx
 
 3. type FN
 
+There are other commands available:
+
+Type H into the command line to see them.
