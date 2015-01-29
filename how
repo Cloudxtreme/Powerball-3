@@ -1,0 +1,40 @@
+[33mcommit 90423d603a88434e567433f35ef39f036a85cd10[m
+Author: Mikyle Baksh <mikyle.baksh@gmail.com>
+Date:   Thu Jun 5 12:25:07 2014 -0400
+
+    Added Detailed Help
+
+[1mdiff --git a/Powerball/Transducer.cpp b/Powerball/Transducer.cpp[m
+[1mindex 933a0e5..679ae94 100644[m
+[1m--- a/Powerball/Transducer.cpp[m
+[1m+++ b/Powerball/Transducer.cpp[m
+[36m@@ -14,10 +14,10 @@[m [mstring Transducer::transduce(string command)[m
+ 	{[m
+ 		result="Commands:\n";[m
+ 		result+="-------------------\n";[m
+[31m-		result += "\tENTER NUMBERS (EN)\n";[m
+[32m+[m		[32mresult += "/tBATCH winNums.txt\n";[m[41m[m
+ 		result += "\tCALCULATE FREQUENT NUMBERS (FN)\n";[m
+ 		result += "\tGENERATE RANDOM NUMBERS (GN)\n";[m
+[31m-		result += "\tGENERATE RANDOM NUMBERS WITH SEED (SR)\n";[m
+[32m+[m		[32mresult += "\tGENERATE RANDOM NUMBERS WITH SEED (SR) + integer\n";[m[41m[m
+ 		result+="\tHELP(H)\n";[m
+ 		result += "\tDETAILED HELP (DH)\n";[m
+ 		result+="\tQUIT(Q)\n";[m
+[36m@@ -40,7 +40,15 @@[m [mstring Transducer::transduce(string command)[m
+ 	}[m
+ 	else if ((token[0] == "DETAILED HELP") || (token[0] == "DH") || (token[0]=="dh"))[m
+ 	{[m
+[31m-		result = "need functionality";[m
+[32m+[m		[32mresult = result = "Commands:\n";[m[41m[m
+[32m+[m		[32mresult += "-------------------\n";[m[41m[m
+[32m+[m		[32mresult += "\tBATCH winNums.txt: Enters all Powerball records contained in winNums.txt\n";[m[41m[m
+[32m+[m		[32mresult += "\tCALCULATE FREQUENT NUMBERS (FN): Calculates which numbers are most frequently drawn in Powerball\n";[m[41m[m
+[32m+[m		[32mresult += "\tGENERATE RANDOM NUMBERS (GN): Generates a random Powerball play\n";[m[41m[m
+[32m+[m		[32mresult += "\tGENERATE RANDOM NUMBERS WITH SEED (SR) + integer: Generates a random Powerball play with integer seed\n";[m[41m[m
+[32m+[m		[32mresult += "\tHELP(H): Shows all available commands\n";[m[41m[m
+[32m+[m		[32mresult += "\tDETAILED HELP (DH): Shows all available commands with description\n";[m[41m[m
+[32m+[m		[32mresult += "\tQUIT(Q)\n";;[m[41m[m
+ 	}[m
+ 	else if((token[0]=="QUIT")||(token[0]=="Q")||(token[0]=="q"))[m
+ 	{[m
